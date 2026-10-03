@@ -13,6 +13,9 @@ Evidence-backed professional credentials verified through GenLayer AI consensus.
 - Demo challenge window: **120 seconds**. Constructor defaults to one day for other deployments. Review timeout: one day.
 - Stored contract source matches `contracts/credential_proof.py` byte for byte.
 
+- [Deployed app](https://credentialproof.amzar1st96.chatgpt.site) — currently owner-private.
+- [Live verification evidence](docs/live-verification.md): finalized VERIFIED credential and all seven transaction receipts.
+
 ## What it does
 
 Create an owner-bound profile, submit up to three specific contribution statements, attach public evidence, request validator review, challenge the provisional verdict, and finalize an immutable credential record. Partial credentials certify only supported statements. Rejected, cancelled, provisional and revoked records contribute no active reputation. Credentials are registry records, not transferable NFTs.
@@ -51,4 +54,4 @@ npm run build
 
 Contract tests use **gltest's actual pinned GenLayer Python SDK v0.2.16**, calldata and storage implementations, with mocked external web/LLM inputs. They are behavioral tests, not live model quality benchmarks. The suite covers issuance, partial scope, malicious hashes, fetch failures, authority checks, deadline boundaries, reserved capacities, independent validator disagreement, unfetched citations, timeouts, duplicate prevention and revocation.
 
-Studionet is a development environment and can reset. This project is a contribution-evidence registry and does not replace a professional licensing authority. Live demonstration evidence will be recorded under `docs/` after the workflow is finalized.
+Studionet is a development environment and can reset. This project is a contribution-evidence registry and does not replace a professional licensing authority. The live demonstration issued `cp-credentialproof-demo-001` with a VERIFIED verdict. See [live verification](docs/live-verification.md). Challenges, rejection and partial issuance are covered by mocked behavioral tests; this live claim was unchallenged.

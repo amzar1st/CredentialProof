@@ -1,0 +1,1 @@
+export const deployment = { address: '0x95c18899305c705eF39d9ca2bF49405D4fbd6bD6', chainId: 61999, rpc: 'https://studio.genlayer.com/api', explorer: 'https://explorer-studio.genlayer.com', studio: 'https://studio.genlayer.com/contracts', owner: '0x70445d9c6Ab66D99aEb59F7F9E93a28f1ef47976' };

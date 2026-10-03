@@ -1,0 +1,32 @@
+{
+  "name": "credentialproof",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 4173",
+    "build": "vite build",
+    "test": "python3 -m pytest tests -q",
+    "test:frontend": "node --test tests/frontend.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amzar1st/CredentialProof.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/amzar1st/CredentialProof/issues"
+  },
+  "homepage": "https://github.com/amzar1st/CredentialProof#readme",
+  "dependencies": {
+    "genlayer-js": "^1.1.8",
+    "vite": "^6.4.1"
+  }
+}

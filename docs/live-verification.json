@@ -1,0 +1,336 @@
+{
+  "captured_at": "2026-10-03T15:34:44.234Z",
+  "network": "Studionet",
+  "chain_id": 61999,
+  "address": "0x95c18899305c705eF39d9ca2bF49405D4fbd6bD6",
+  "read_state": "LATEST_FINAL",
+  "receipts": [
+    {
+      "method": "deploy",
+      "hash": "0x29bc698b41cd260f6af6e126271fa3eb79ea5cf96db22650705d633143b82c50",
+      "status": 7,
+      "statusName": "FINALIZED",
+      "result": 6,
+      "result_name": "MAJORITY_AGREE",
+      "rotation_count": 0,
+      "votes": {
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+        "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+        "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "agree",
+        "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "agree",
+        "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "agree"
+      },
+      "executions": [
+        {
+          "mode": "leader",
+          "vote": null,
+          "execution_result": "SUCCESS",
+          "error_code": null
+        },
+        {
+          "mode": "validator",
+          "vote": "agree",
+          "execution_result": "SUCCESS",
+          "error_code": null
+        }
+      ]
+    },
+    {
+      "method": "create_profile",
+      "hash": "0x9a818ec393b13a9199a3935fcda16f8f743d9d21e68afd5888653f286b3a4fc4",
+      "status": 7,
+      "statusName": "FINALIZED",
+      "result": 6,
+      "result_name": "MAJORITY_AGREE",
+      "rotation_count": 0,
+      "votes": {
+        "0x4404Fb70d490c935758146f42A73DC850FF95C71": "agree",
+        "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "agree",
+        "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "agree",
+        "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "agree",
+        "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "agree"
+      },
+      "executions": [
+        {
+          "mode": "leader",
+          "vote": null,
+          "execution_result": "SUCCESS",
+          "error_code": null
+        },
+        {
+          "mode": "validator",
+          "vote": "agree",
+          "execution_result": "SUCCESS",
+          "error_code": null
+        }
+      ]
+    },
+    {
+      "method": "submit_claim",
+      "hash": "0xe41b51fd2fecd97d3a006af20e93b7e5cd2f10c1c337e0f4b94e0f2a8f544ed5",
+      "status": 7,
+      "statusName": "FINALIZED",
+      "result": 6,
+      "result_name": "MAJORITY_AGREE",
+      "rotation_count": 0,
+      "votes": {
+        "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+        "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "agree",
+        "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree",
+        "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "agree"
+      },
+      "executions": [
+        {
+          "mode": "leader",
+          "vote": null,
+          "execution_result": "SUCCESS",
+          "error_code": null
+        },
+        {
+          "mode": "validator",
+          "vote": "agree",
+          "execution_result": "SUCCESS",
+          "error_code": null
+        }
+      ]
+    },
+    {
+      "method": "attach_evidence",
+      "hash": "0x0fab954841c02eddd2675be2a49e876ee4ae329e4dea5fde647411faba2a8027",
+      "status": 7,
+      "statusName": "FINALIZED",
+      "result": 6,
+      "result_name": "MAJORITY_AGREE",
+      "rotation_count": 0,
+      "votes": {
+        "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "agree",
+        "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+        "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "agree",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree",
+        "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree"
+      },
+      "executions": [
+        {
+          "mode": "leader",
+          "vote": null,
+          "execution_result": "SUCCESS",
+          "error_code": null
+        },
+        {
+          "mode": "validator",
+          "vote": "agree",
+          "execution_result": "SUCCESS",
+          "error_code": null
+        }
+      ]
+    },
+    {
+      "method": "request_verification",
+      "hash": "0x866b9edfd8800262b0724a4a6027e3e2bc8e15ffe7a8db09e742dcdaf080e7d1",
+      "status": 7,
+      "statusName": "FINALIZED",
+      "result": 6,
+      "result_name": "MAJORITY_AGREE",
+      "rotation_count": 0,
+      "votes": {
+        "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "agree",
+        "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "agree",
+        "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "idle",
+        "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "agree"
+      },
+      "executions": [
+        {
+          "mode": "leader",
+          "vote": null,
+          "execution_result": "SUCCESS",
+          "error_code": null
+        },
+        {
+          "mode": "validator",
+          "vote": "agree",
+          "execution_result": "SUCCESS",
+          "error_code": null
+        }
+      ]
+    },
+    {
+      "method": "validator_review",
+      "hash": "0x7d79fbed469ed96f90b7843861349a7a173e4f8c7dadf1cae717bf9e0c78fb24",
+      "status": 7,
+      "statusName": "FINALIZED",
+      "result": 6,
+      "result_name": "MAJORITY_AGREE",
+      "rotation_count": 2,
+      "votes": {
+        "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "idle",
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+        "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+        "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "agree",
+        "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "idle"
+      },
+      "executions": [
+        {
+          "mode": "leader",
+          "vote": null,
+          "execution_result": "SUCCESS",
+          "error_code": null
+        },
+        {
+          "mode": "validator",
+          "vote": "idle",
+          "execution_result": "ERROR",
+          "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+        }
+      ]
+    },
+    {
+      "method": "finalize",
+      "hash": "0xfb03c7b091416bf49dd8748774cc2ba791a137559fcbf7b4c46754d59d810689",
+      "status": 7,
+      "statusName": "FINALIZED",
+      "result": 6,
+      "result_name": "MAJORITY_AGREE",
+      "rotation_count": 0,
+      "votes": {
+        "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "agree",
+        "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "idle",
+        "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "agree",
+        "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "agree",
+        "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "agree"
+      },
+      "executions": [
+        {
+          "mode": "leader",
+          "vote": null,
+          "execution_result": "SUCCESS",
+          "error_code": null
+        },
+        {
+          "mode": "validator",
+          "vote": "idle",
+          "execution_result": "ERROR",
+          "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+        }
+      ]
+    }
+  ],
+  "claim": {
+    "challenge_deadline": 1791041233,
+    "challenges": [],
+    "created_at": 1791040785,
+    "credential": {
+      "id": "cp-credentialproof-demo-001",
+      "issued_at": 1791041506,
+      "owner": "0x70445d9c6ab66d99aeb59f7f9e93a28f1ef47976",
+      "scope": [
+        "The amzar1st GitHub account published the CredentialProof Python intelligent contract with profile creation, evidence review and credential finalization methods."
+      ],
+      "skill": "GenLayer intelligent contracts",
+      "transferable": false,
+      "verdict": "VERIFIED"
+    },
+    "evidence": [
+      {
+        "note": "Commit-pinned Python contract source. Check profile, validator_review and finalize methods.",
+        "party": "0x70445d9c6ab66d99aeb59f7f9e93a28f1ef47976",
+        "sha256": "751dfd83e8bc6f656be5d14b8471734e06dac343ab14451061b8d62251858a06",
+        "url": "https://raw.githubusercontent.com/amzar1st/CredentialProof/2956ff9939fb01f2114782f7e1b859f87dd483a3/contracts/credential_proof.py"
+      }
+    ],
+    "finalized_at": 1791041506,
+    "id": "credentialproof-demo-001",
+    "initial_result": {
+      "citations": [
+        [
+          0
+        ]
+      ],
+      "contradicted": [
+        false
+      ],
+      "identity_verified": true,
+      "reasoning": "Page 0 contains the full source code of the 'CredentialProof' Python contract, published in the amzar1st/CredentialProof repository. The contract defines the methods create_profile, submit_claim, attach_evidence, request_verification, validator_review, challenge_claim, review_challenges, finalize, and others, matching the statement's description of 'profile creation, evidence review and credential finalization methods.' Since the page is the contract file from that repository, it directly supports that the amzar1st GitHub account published this contract.",
+      "sources": [
+        {
+          "index": 0,
+          "sha256": "751dfd83e8bc6f656be5d14b8471734e06dac343ab14451061b8d62251858a06",
+          "url": "https://raw.githubusercontent.com/amzar1st/CredentialProof/2956ff9939fb01f2114782f7e1b859f87dd483a3/contracts/credential_proof.py",
+          "usable": true
+        }
+      ],
+      "supported": [
+        true
+      ],
+      "verdict": "VERIFIED"
+    },
+    "owner": "0x70445d9c6ab66d99aeb59f7f9e93a28f1ef47976",
+    "profile": {
+      "created_at": 1791040492,
+      "display_name": "CredentialProof demo owner",
+      "github_login": "amzar1st",
+      "identity_token": "CredentialProof:0x95c18899305c705ef39d9ca2bf49405d4fbd6bd6:0x70445d9c6ab66d99aeb59f7f9e93a28f1ef47976:amzar1st",
+      "identity_url": "https://raw.githubusercontent.com/amzar1st/CredentialProof/main/docs/studio-wallet-attestation.txt",
+      "owner": "0x70445d9c6ab66d99aeb59f7f9e93a28f1ef47976"
+    },
+    "requested_at": 1791040974,
+    "result": {
+      "citations": [
+        [
+          0
+        ]
+      ],
+      "contradicted": [
+        false
+      ],
+      "identity_verified": true,
+      "reasoning": "Page 0 contains the full source code of the 'CredentialProof' Python contract, published in the amzar1st/CredentialProof repository. The contract defines the methods create_profile, submit_claim, attach_evidence, request_verification, validator_review, challenge_claim, review_challenges, finalize, and others, matching the statement's description of 'profile creation, evidence review and credential finalization methods.' Since the page is the contract file from that repository, it directly supports that the amzar1st GitHub account published this contract.",
+      "sources": [
+        {
+          "index": 0,
+          "sha256": "751dfd83e8bc6f656be5d14b8471734e06dac343ab14451061b8d62251858a06",
+          "url": "https://raw.githubusercontent.com/amzar1st/CredentialProof/2956ff9939fb01f2114782f7e1b859f87dd483a3/contracts/credential_proof.py",
+          "usable": true
+        }
+      ],
+      "supported": [
+        true
+      ],
+      "verdict": "VERIFIED"
+    },
+    "reviews": 1,
+    "revoked": false,
+    "skill": "GenLayer intelligent contracts",
+    "statements": [
+      "The amzar1st GitHub account published the CredentialProof Python intelligent contract with profile creation, evidence review and credential finalization methods."
+    ],
+    "status": "ISSUED",
+    "title": "Public CredentialProof registry implementation"
+  },
+  "profile": {
+    "created_at": 1791040492,
+    "credentials": [
+      {
+        "id": "cp-credentialproof-demo-001",
+        "issued_at": 1791041506,
+        "owner": "0x70445d9c6ab66d99aeb59f7f9e93a28f1ef47976",
+        "scope": [
+          "The amzar1st GitHub account published the CredentialProof Python intelligent contract with profile creation, evidence review and credential finalization methods."
+        ],
+        "skill": "GenLayer intelligent contracts",
+        "transferable": false,
+        "verdict": "VERIFIED"
+      }
+    ],
+    "display_name": "CredentialProof demo owner",
+    "github_login": "amzar1st",
+    "identity_token": "CredentialProof:0x95c18899305c705ef39d9ca2bf49405d4fbd6bd6:0x70445d9c6ab66d99aeb59f7f9e93a28f1ef47976:amzar1st",
+    "identity_url": "https://raw.githubusercontent.com/amzar1st/CredentialProof/main/docs/studio-wallet-attestation.txt",
+    "owner": "0x70445d9c6ab66d99aeb59f7f9e93a28f1ef47976",
+    "reputation": {
+      "partial": 0,
+      "verified": 1
+    }
+  }
+}
