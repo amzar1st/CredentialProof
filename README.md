@@ -43,6 +43,8 @@ Public reads use **LATEST_FINAL**, never seeded fallbacks. Select a claim to ins
 
 ## Run and test
 
+Requires Node.js 22+ and Python 3.12+.
+
 ```sh
 npm ci
 python3 -m pip install -r requirements-test.txt
