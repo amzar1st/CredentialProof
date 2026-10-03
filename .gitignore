@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.sites-runtime/
+.env
+artifacts/
+__pycache__/
+.pytest_cache/
+*.pyc
