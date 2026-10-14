@@ -1,0 +1,3 @@
+CredentialProof:0x77aa83668d0f9bc8ae9c6fd3a4e378fed16858f3:0x4831f17d62efc09a52c2cf7901ea95340257f2a6:amzar1st
+
+Public test-account attestation for CredentialProof v2.0.2 on Studionet. Account control does not establish personal authorship or accreditation.
