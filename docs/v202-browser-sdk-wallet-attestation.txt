@@ -1,0 +1,3 @@
+CredentialProof:0xb79e97c260c54d44d8d074dc888afc9d13bc87a5:0x4831f17d62efc09a52c2cf7901ea95340257f2a6:amzar1st
+
+Public SDK test-wallet attestation for recovery/rejection/revocation on the browser-deployed v2.0.2 registry.
