@@ -59,6 +59,26 @@ class CredentialProof(gl.Contract):
     def _owner(self, c: dict):
         require(c["owner"] == str(gl.message.sender_address).lower(), "Claim owner only")
 
+    def _carry_sources(self, previous: dict, replacement: list) -> list:
+        # Failed-review recovery cannot launder prior contradictory evidence.
+        # Sources removed from the claimant set become mandatory queued context.
+        replacement_keys = set((e["url"], e["sha256"]) for e in replacement)
+        seen = set()
+        carried = []
+        for e in previous["challenges"] + previous["evidence"] + previous["responses"]:
+            key = (e["url"], e["sha256"])
+            # Challenge commitments remain mandatory even when also supplied
+            # as replacement claimant evidence. Do not drop changed hash pins.
+            mandatory = e in previous["challenges"]
+            if key not in seen and (mandatory or key not in replacement_keys):
+                entry = dict(e)
+                entry["carried"] = True
+                entry["origin_claim"] = entry.get("origin_claim", previous["id"])
+                entry["origin_attempt"] = entry.get("origin_attempt", previous["attempt"])
+                carried.append(entry)
+                seen.add(key)
+        return carried
+
     @gl.public.write
     def create_profile(self, display_name: str, github_login: str, identity_url: str):
         owner = str(gl.message.sender_address).lower()
@@ -91,6 +111,7 @@ class CredentialProof(gl.Contract):
         require(len(set(statements)) == len(statements), "Duplicate statements")
         duplicate = hashlib.sha256(json.dumps([owner, skill.strip().lower(),
             sorted(s.lower() for s in statements)]).encode()).hexdigest()
+        previous = None
         if duplicate in self.duplicate_keys:
             previous = self._claim(self.duplicate_keys[duplicate])
             require(previous["status"] in ("REJECTED", "CANCELLED"), "Identical active claim already submitted")
@@ -100,7 +121,7 @@ class CredentialProof(gl.Contract):
         self.claim_ids.append(claim_id)
         self._save({"id": claim_id, "owner": owner, "title": title.strip(), "skill": skill.strip(),
             "statements": statements, "profile": json.loads(self.profiles[owner]), "evidence": [],
-            "challenges": [], "responses": [], "history": [], "review_history": [], "attempt": 1,
+            "challenges": self._carry_sources(previous, []) if previous else [], "previous_claim": previous["id"] if previous else None, "responses": [], "history": [], "review_history": [], "attempt": 1,
             "duplicate_key": duplicate, "challenge_cursor": 0, "response_deadline": 0, "status": "DRAFT", "created_at": now(), "requested_at": 0,
             "challenge_deadline": 0, "result": None, "initial_result": None,
             "reviews": 0, "credential": None, "revoked": False})
@@ -300,7 +321,8 @@ and verified recipient and is outside this contribution registry. Return JSON {"
             "challenges": c["challenges"], "responses": c["responses"], "initial_result": c["initial_result"],
             "result": c["result"], "requested_at": c["requested_at"], "challenge_deadline": c["challenge_deadline"],
             "response_deadline": c["response_deadline"], "closed_at": now()})
-        c.update({"attempt": c["attempt"] + 1, "status": "DRAFT", "evidence": entries, "challenges": [],
+        carried = self._carry_sources(c, entries)
+        c.update({"attempt": c["attempt"] + 1, "status": "DRAFT", "evidence": entries, "challenges": carried,
                   "responses": [], "challenge_cursor": 0, "response_deadline": 0, "challenge_deadline": 0,
                   "requested_at": 0, "initial_result": None, "result": None})
         self.duplicate_keys[c["duplicate_key"]] = claim_id
@@ -316,6 +338,8 @@ and verified recipient and is outside this contribution registry. Return JSON {"
         c["initial_result"] = result
         c["status"] = "PROVISIONAL"
         c["challenge_deadline"] = now() + self.challenge_seconds
+        if c["challenges"]:
+            c["response_deadline"] = c["challenge_deadline"] + self.challenge_seconds
         c["reviews"] += 1
         self._record_review(c, "initial")
         self._save(c)
@@ -327,7 +351,7 @@ and verified recipient and is outside this contribution registry. Return JSON {"
         require(c["status"] == "PROVISIONAL" and now() < c["challenge_deadline"], "Challenge window closed")
         require(challenger != c["owner"], "Claimant cannot challenge own claim")
         require(10 <= len(reason.strip()) <= 800, "Explain the challenge in 10-800 characters")
-        require(challenger not in [e["party"] for e in c["challenges"]], "One challenge per wallet per attempt")
+        require(challenger not in [e["party"] for e in c["challenges"] if not e.get("carried")], "One challenge per wallet per attempt")
         require(url not in [e["url"] for e in c["evidence"] + c["challenges"]], "Duplicate evidence URL")
         require(reason.strip().lower() not in [e["note"].lower() for e in c["challenges"]], "Duplicate allegation")
         c["challenges"].append(evidence(url, content_hash, challenger, reason.strip()))
@@ -446,7 +470,7 @@ and verified recipient and is outside this contribution registry. Return JSON {"
 
     @gl.public.view
     def get_config(self) -> str:
-        return json.dumps({"name": "CredentialProof", "version": "2.0.1", "challenge_seconds": self.challenge_seconds,
+        return json.dumps({"name": "CredentialProof", "version": "2.0.2", "challenge_seconds": self.challenge_seconds,
             "review_timeout_seconds": self.review_timeout_seconds, "claimant_capacity": 6,
             "challenge_batch_size": 4, "claimant_response_capacity": 6,
             "response_seconds": self.challenge_seconds, "maximum_attempts": 3, "source_context_limit": 18000,

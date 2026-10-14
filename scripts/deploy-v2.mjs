@@ -11,7 +11,7 @@ try{secret=JSON.parse(await fs.readFile(keyPath,'utf8'));}catch(error){if(error.
 const account=privateKeyToAccount(secret.privateKey);
 const client=createClient({chain:studionet,account});
 console.log('Test deployer',account.address);
-const checkpoint='docs/v2-deployment.json';
+const checkpoint=process.env.CP_DEPLOYMENT_PATH || 'docs/v2-deployment.json';
 let record;
 try{record=JSON.parse(await fs.readFile(checkpoint,'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;}
 const code=await fs.readFile('contracts/credential_proof.py','utf8');
@@ -24,7 +24,7 @@ if(!record){
  await fs.writeFile(checkpoint,JSON.stringify(record,null,2)+'\n');console.log('Submitted',hash);
 }
 const receipt=await client.waitForTransactionReceipt({hash:record.deploymentTx,status:'FINALIZED',interval:3000,retries:200});
-await fs.writeFile('docs/v2-deployment-receipt.json',JSON.stringify(publicReceipt(receipt),null,2)+'\n');
+await fs.writeFile(checkpoint.replace('.json','-receipt.json'),JSON.stringify(publicReceipt(receipt),null,2)+'\n');
 assertSuccessfulReceipt(receipt);
 record.address=receipt.to_address || receipt.recipient;
 if(!/^0x[0-9a-f]{40}$/i.test(record.address||''))throw Error('Deployment receipt missing contract address');

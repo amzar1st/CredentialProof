@@ -348,3 +348,39 @@ def test_later_challenge_batch_cannot_erase_prior_disqualification(registry):
     warp(vm,'2026-10-03T00:06:00Z');c.review_challenges('one');c.finalize('one')
     assert result(c)['status']=='REJECTED'
     assert len(result(c)['review_history'])==3
+
+
+def test_recovery_and_resubmission_cannot_erase_adversarial_sources(registry):
+    c,vm=registry
+    claim(c);model(vm);c.validator_review('one')
+    with vm.prank(create_address('bob')):c.challenge_claim('one',OTHER,'','An important contrary attribution allegation.')
+    warp(vm,'2026-10-05T00:00:00Z');c.resolve_timeout('one')
+    replacement=json.dumps([{'url':SOURCE,'sha256':'','note':'Recovered source'}])
+    c.retry_claim('one',replacement)
+    assert result(c)['challenges'][0]['url']==OTHER
+    assert result(c)['challenges'][0]['carried'] is True
+    c.request_verification('one');model(vm);c.validator_review('one')
+    c.respond_to_challenge('one',SOURCE,'','Recovered attribution addresses the retained allegation.')
+    warp(vm,'2026-10-05T00:04:00Z')
+    with vm.expect_revert('Review challenges'):c.finalize('one')
+    c.review_challenges('one');c.finalize('one')
+    assert result(c)['status']=='ISSUED'
+
+
+def test_new_claim_id_keeps_mandatory_prior_context(registry):
+    c,vm=registry
+    claim(c);c.cancel_claim('one')
+    c.submit_claim('two','Controlled replacement','Python','["Alice authored the wallet integration."]')
+    new=json.loads(c.get_claim('two'))
+    assert new['previous_claim']=='one'
+    assert new['challenges'][0]['url']==SOURCE and new['challenges'][0]['carried']
+
+
+def test_replacement_cannot_remove_challenge_commitment(registry):
+    c,vm=registry
+    claim(c);model(vm);c.validator_review('one')
+    with vm.prank(create_address('bob')):
+        c.challenge_claim('one',OTHER,'a'*64,'A pinned source contradicts the attribution.')
+    warp(vm,'2026-10-05T00:00:00Z');c.resolve_timeout('one')
+    c.retry_claim('one',json.dumps([{'url':OTHER,'sha256':'','note':'Unpinned replacement'}]))
+    assert any(e['url']==OTHER and e['sha256']=='a'*64 and e['carried'] for e in result(c)['challenges'])
