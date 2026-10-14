@@ -1,6 +1,5 @@
 import { createClient } from 'genlayer-js';
 import { studionet } from 'genlayer-js/chains';
-import { custom } from 'viem';
 import { deployment } from './config.js';
 
 export const publicClient = createClient({ chain: studionet, endpoint: deployment.rpc });
@@ -21,7 +20,9 @@ export async function connectWallet() {
       await window.ethereum.request({ method: 'wallet_switchEthereumChain', params: [{ chainId: '0xf22f' }] });
     }
   }
-  return { address, client: createClient({ chain: studionet, account: address, transport: custom(window.ethereum), endpoint: deployment.rpc }) };
+  if (!/^0x[0-9a-f]{40}$/i.test(address || '')) throw new Error('No valid wallet account selected.');
+  if (Number(await window.ethereum.request({method:'eth_chainId'})) !== deployment.chainId) throw new Error('Wallet network switch did not complete.');
+  return { address, client: createClient({ chain: studionet, account: address, provider: window.ethereum, endpoint: deployment.rpc }) };
 }
 export function assertSuccessfulReceipt(receipt) {
   const finalized = receipt.status === 'FINALIZED' || receipt.status === 7 || receipt.status === '7';
@@ -35,6 +36,12 @@ export function assertSuccessfulReceipt(receipt) {
   if (!finalized || !success) throw new Error(`Transaction ${receipt.status}: execution was not finalized successfully`);
 }
 export async function write(client, functionName, args, report) {
+  if (typeof window !== 'undefined' && window.ethereum) {
+    const chain = Number(await window.ethereum.request({method:'eth_chainId'}));
+    const accounts = await window.ethereum.request({method:'eth_accounts'});
+    if (chain !== deployment.chainId) throw new Error('Reconnect to GenLayer Studionet before signing.');
+    if (accounts[0]?.toLowerCase() !== client.account?.address?.toLowerCase()) throw new Error('Wallet account changed. Reconnect before signing.');
+  }
   const submitted = await client.writeContract({ address: deployment.address, functionName, args, value: 0n });
   const hash = typeof submitted === 'string' ? submitted : submitted.txId || submitted.hash;
   if (!/^0x[0-9a-f]{64}$/i.test(hash || '')) throw new Error('No valid transaction hash returned.');

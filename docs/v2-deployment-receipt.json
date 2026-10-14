@@ -1,0 +1,45 @@
+{
+  "hash": "0xceabf8e9227ae47962fc8126f49c5bb1247bc74ebb810628da004f3db6e3749a",
+  "tx_id": "0xceabf8e9227ae47962fc8126f49c5bb1247bc74ebb810628da004f3db6e3749a",
+  "status": 7,
+  "status_name": "FINALIZED",
+  "result_name": "MAJORITY_AGREE",
+  "from_address": "0x4831F17D62EfC09A52c2Cf7901Ea95340257f2a6",
+  "to_address": "0x7E812995198e8C4715EBb96D3F09dF8372f05d66",
+  "sender": "0x4831F17D62EfC09A52c2Cf7901Ea95340257f2a6",
+  "recipient": "0x7E812995198e8C4715EBb96D3F09dF8372f05d66",
+  "origin_address": "0x4831F17D62EfC09A52c2Cf7901Ea95340257f2a6",
+  "created_at": "2026-10-14T07:57:23.500782+00:00",
+  "leader_only": false,
+  "execution_mode": "NORMAL",
+  "num_of_rounds": "1",
+  "consensus_data": {
+    "votes": {
+      "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+      "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "agree",
+      "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree",
+      "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "agree",
+      "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree"
+    },
+    "leader_receipt": [
+      {
+        "execution_result": "SUCCESS",
+        "mode": "leader",
+        "vote": null,
+        "genvm_result": {
+          "error_code": null,
+          "error_description": null
+        }
+      },
+      {
+        "execution_result": "SUCCESS",
+        "mode": "validator",
+        "vote": "agree",
+        "genvm_result": {
+          "error_code": null,
+          "error_description": null
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "network": "Studionet",
+  "chainId": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "deploymentTx": "0x1385ec52747e34776d276e31ee01d83cdbcd210b2572421d8807641767fcf64a",
+  "sourceSha256": "47e8609709875ccd22d0d02e3cdc9926aeb31af93ca863f30fa619a85ccdf0fe",
+  "deployer": "0x4831F17D62EfC09A52c2Cf7901Ea95340257f2a6",
+  "challengeSeconds": 60,
+  "responseSeconds": 60,
+  "submittedAt": "2026-10-14T07:48:46.030Z",
+  "address": "0xf4273888429c31dc1618b63f55C42e75ae774957",
+  "config": {
+    "name": "CredentialProof",
+    "version": "2.0.0",
+    "challenge_seconds": 60,
+    "review_timeout_seconds": 86400,
+    "claimant_capacity": 6,
+    "challenge_batch_size": 4,
+    "claimant_response_capacity": 6,
+    "response_seconds": 60,
+    "maximum_attempts": 3,
+    "source_context_limit": 18000,
+    "challenge_capacity": "open queue; one distinct allegation per wallet per attempt",
+    "credential_transferable": false
+  },
+  "finalizedAt": "2026-10-14T07:49:24.379Z"
+}

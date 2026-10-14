@@ -18,3 +18,34 @@ test('accepts successful leader with an idle validator cancelled after quorum', 
   cancelled.genvm_result.error_code = 'CONTRACT_ERROR';
   assert.throws(()=>assertSuccessfulReceipt(receipt));
 });
+
+import {connectWallet, write} from '../src/chain.js';
+const address='0x'+'1'.repeat(40);
+test('wallet connection checks account and network and configures selected signer', async()=>{
+ globalThis.window={ethereum:{request:async({method})=>method==='eth_requestAccounts'?[address]:'0xf22f'}};
+ try {const wallet=await connectWallet();assert.equal(wallet.address,address);assert.equal(wallet.client.account.address,address);}finally{delete globalThis.window;}
+});
+test('wallet connection preserves rejection and rejects empty accounts', async()=>{
+ globalThis.window={ethereum:{request:async()=>{throw new Error('User rejected connection');}}};
+ await assert.rejects(connectWallet(),/User rejected/);
+ window.ethereum.request=async({method})=>method==='eth_requestAccounts'?[]:'0xf22f';
+ try{await assert.rejects(connectWallet(),/No valid wallet/);}finally{delete globalThis.window;}
+});
+test('write blocks stale accounts or wrong network before transaction submission',async()=>{
+ const client={account:{address},writeContract:()=>{throw Error('Must not submit');}};
+ globalThis.window={ethereum:{request:async({method})=>method==='eth_chainId'?'0x1':[address]}};
+ try{
+  await assert.rejects(write(client,'finalize',['case'],()=>{}),/Reconnect to GenLayer/);
+  window.ethereum.request=async({method})=>method==='eth_chainId'?'0xf22f':['0x'+'2'.repeat(40)];
+  await assert.rejects(write(client,'finalize',['case'],()=>{}),/Wallet account changed/);
+ }finally{delete globalThis.window;}
+});
+test('write reports success only after finalized execution receipt',async()=>{
+ const reports=[],hash='0x'+'a'.repeat(64);
+ const client={writeContract:async()=>hash,waitForTransactionReceipt:async()=>({status:7,consensus_data:{leader_receipt:[{execution_result:'SUCCESS'}]}})};
+ await write(client,'finalize',['case'],row=>reports.push(row));
+ assert.equal(reports.length,2);assert.equal(reports[1].status,'Finalized successfully');
+ reports.length=0;client.waitForTransactionReceipt=async()=>({status:7,consensus_data:{leader_receipt:[{execution_result:'ERROR'}]}});
+ await assert.rejects(write(client,'finalize',['case'],row=>reports.push(row)),/not finalized successfully/);
+ assert.equal(reports.length,1);
+});
