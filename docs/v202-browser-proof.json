@@ -1,0 +1,756 @@
+{
+  "network": "Studionet",
+  "origin": "Browser UI: GenLayer Studio built-in wallet",
+  "contract": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+  "owner": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+  "sourceSha256": "bb5de3457d8a7d2b3d644b7cbb38f7ed4d8946877ef75e03317d852f5edd6138",
+  "challengeSeconds": 300,
+  "transactions": [
+    {
+      "method": "deploy",
+      "args": [
+        "300"
+      ],
+      "hash": "0x838209bde6d02677d8fc409cf7f6442d40e0734436f90d58374e649c2169a862",
+      "signer": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+      "createdAt": "2026-10-14T08:38:14.248792+00:00",
+      "receipt": {
+        "hash": "0x838209bde6d02677d8fc409cf7f6442d40e0734436f90d58374e649c2169a862",
+        "tx_id": "0x838209bde6d02677d8fc409cf7f6442d40e0734436f90d58374e649c2169a862",
+        "status": 7,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "to_address": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "sender": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "recipient": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "origin_address": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "created_at": "2026-10-14T08:38:14.248792+00:00",
+        "leader_only": false,
+        "execution_mode": "NORMAL",
+        "num_of_rounds": "1",
+        "consensus_data": {
+          "votes": {
+            "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+            "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+            "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "idle",
+            "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "idle",
+            "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "agree"
+          },
+          "leader_receipt": [
+            {
+              "execution_result": "SUCCESS",
+              "mode": "leader",
+              "vote": null,
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            },
+            {
+              "execution_result": "SUCCESS",
+              "mode": "validator",
+              "vote": "agree",
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            }
+          ]
+        }
+      },
+      "success": true
+    },
+    {
+      "method": "create_profile",
+      "args": [
+        "Studio browser contribution demo",
+        "amzar1st",
+        "https://raw.githubusercontent.com/amzar1st/CredentialProof/main/docs/v202-studio-wallet-attestation.txt"
+      ],
+      "hash": "0xb3e3393c0c7644ba156995a695fa364a9a4fa13fdfc033470ef39cb15848dceb",
+      "signer": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+      "createdAt": "2026-10-14T08:39:42.164292+00:00",
+      "receipt": {
+        "hash": "0xb3e3393c0c7644ba156995a695fa364a9a4fa13fdfc033470ef39cb15848dceb",
+        "tx_id": "0xb3e3393c0c7644ba156995a695fa364a9a4fa13fdfc033470ef39cb15848dceb",
+        "status": 7,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "to_address": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "sender": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "recipient": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "origin_address": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "created_at": "2026-10-14T08:39:42.164292+00:00",
+        "leader_only": false,
+        "execution_mode": "NORMAL",
+        "num_of_rounds": "1",
+        "consensus_data": {
+          "votes": {
+            "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+            "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+            "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "idle",
+            "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "idle",
+            "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "agree"
+          },
+          "leader_receipt": [
+            {
+              "execution_result": "SUCCESS",
+              "mode": "leader",
+              "vote": null,
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            },
+            {
+              "execution_result": "SUCCESS",
+              "mode": "validator",
+              "vote": "agree",
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            }
+          ]
+        }
+      },
+      "success": true
+    },
+    {
+      "method": "submit_claim",
+      "args": [
+        "cp-browser-v202-001",
+        "Browser-built credential with adversarial rebuttal",
+        "Browser contribution verification",
+        "[\"The amzar1st GitHub account is recorded as the author of commit 76608d0c9b63637a7116154fd551583074a8f9c5, which added the CredentialProof submission logo.\"]"
+      ],
+      "hash": "0xac0f7fd731d73052f99978e18c80ac82b5bf7a575e4299cb4172f282cce36f63",
+      "signer": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+      "createdAt": "2026-10-14T08:41:20.110436+00:00",
+      "receipt": {
+        "hash": "0xac0f7fd731d73052f99978e18c80ac82b5bf7a575e4299cb4172f282cce36f63",
+        "tx_id": "0xac0f7fd731d73052f99978e18c80ac82b5bf7a575e4299cb4172f282cce36f63",
+        "status": 7,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "to_address": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "sender": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "recipient": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "origin_address": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "created_at": "2026-10-14T08:41:20.110436+00:00",
+        "leader_only": false,
+        "execution_mode": "NORMAL",
+        "num_of_rounds": "1",
+        "consensus_data": {
+          "votes": {
+            "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "agree",
+            "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "agree",
+            "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "agree",
+            "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "agree",
+            "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree"
+          },
+          "leader_receipt": [
+            {
+              "execution_result": "SUCCESS",
+              "mode": "leader",
+              "vote": null,
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            },
+            {
+              "execution_result": "SUCCESS",
+              "mode": "validator",
+              "vote": "agree",
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            }
+          ]
+        }
+      },
+      "success": true
+    },
+    {
+      "method": "attach_evidence",
+      "args": [
+        "cp-browser-v202-001",
+        "https://api.github.com/repos/amzar1st/CredentialProof/commits/76608d0c9b63637a7116154fd551583074a8f9c5",
+        "",
+        "Full canonical commit with account attribution, submitted through Studio browser UI."
+      ],
+      "hash": "0x02cd7ef5ea5d155a8dcc1fbc2f9b9cd60d427aafaf097f7abdcc3a750e523dc2",
+      "signer": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+      "createdAt": "2026-10-14T08:42:10.992086+00:00",
+      "receipt": {
+        "hash": "0x02cd7ef5ea5d155a8dcc1fbc2f9b9cd60d427aafaf097f7abdcc3a750e523dc2",
+        "tx_id": "0x02cd7ef5ea5d155a8dcc1fbc2f9b9cd60d427aafaf097f7abdcc3a750e523dc2",
+        "status": 7,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "to_address": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "sender": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "recipient": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "origin_address": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "created_at": "2026-10-14T08:42:10.992086+00:00",
+        "leader_only": false,
+        "execution_mode": "NORMAL",
+        "num_of_rounds": "1",
+        "consensus_data": {
+          "votes": {
+            "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+            "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+            "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "agree",
+            "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "agree",
+            "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "agree"
+          },
+          "leader_receipt": [
+            {
+              "execution_result": "SUCCESS",
+              "mode": "leader",
+              "vote": null,
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            },
+            {
+              "execution_result": "SUCCESS",
+              "mode": "validator",
+              "vote": "agree",
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            }
+          ]
+        }
+      },
+      "success": true
+    },
+    {
+      "method": "request_verification",
+      "args": [
+        "cp-browser-v202-001"
+      ],
+      "hash": "0xb28607cc3264a60f75cb1ddc1e9c076dc2d95e40a0c0a45040bd851d5d2d2b04",
+      "signer": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+      "createdAt": "2026-10-14T08:43:26.800417+00:00",
+      "receipt": {
+        "hash": "0xb28607cc3264a60f75cb1ddc1e9c076dc2d95e40a0c0a45040bd851d5d2d2b04",
+        "tx_id": "0xb28607cc3264a60f75cb1ddc1e9c076dc2d95e40a0c0a45040bd851d5d2d2b04",
+        "status": 7,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "to_address": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "sender": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "recipient": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "origin_address": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "created_at": "2026-10-14T08:43:26.800417+00:00",
+        "leader_only": false,
+        "execution_mode": "NORMAL",
+        "num_of_rounds": "1",
+        "consensus_data": {
+          "votes": {
+            "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+            "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "idle",
+            "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "agree",
+            "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree",
+            "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "idle"
+          },
+          "leader_receipt": [
+            {
+              "execution_result": "SUCCESS",
+              "mode": "leader",
+              "vote": null,
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            },
+            {
+              "execution_result": "SUCCESS",
+              "mode": "validator",
+              "vote": "agree",
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            }
+          ]
+        }
+      },
+      "success": true
+    },
+    {
+      "method": "validator_review",
+      "args": [
+        "cp-browser-v202-001"
+      ],
+      "hash": "0x21260a9e6a9fb1939b54e19c6815c77bc911dab038284560a17f5a4a91d01b48",
+      "signer": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+      "createdAt": "2026-10-14T08:45:32.240668+00:00",
+      "receipt": {
+        "hash": "0x21260a9e6a9fb1939b54e19c6815c77bc911dab038284560a17f5a4a91d01b48",
+        "tx_id": "0x21260a9e6a9fb1939b54e19c6815c77bc911dab038284560a17f5a4a91d01b48",
+        "status": 7,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "to_address": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "sender": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "recipient": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "origin_address": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "created_at": "2026-10-14T08:45:32.240668+00:00",
+        "leader_only": false,
+        "execution_mode": "NORMAL",
+        "num_of_rounds": "1",
+        "consensus_data": {
+          "votes": {
+            "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+            "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "agree",
+            "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "disagree",
+            "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "idle",
+            "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "agree"
+          },
+          "leader_receipt": [
+            {
+              "execution_result": "SUCCESS",
+              "mode": "leader",
+              "vote": null,
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            },
+            {
+              "execution_result": "SUCCESS",
+              "mode": "validator",
+              "vote": "disagree",
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            }
+          ]
+        }
+      },
+      "success": true
+    },
+    {
+      "method": "challenge_claim",
+      "args": [
+        "cp-browser-v202-001",
+        "https://raw.githubusercontent.com/amzar1st/CredentialProof/76608d0c9b63637a7116154fd551583074a8f9c5/docs/live-verification.md",
+        "",
+        "The earlier documentation disclaims personal authorship. The account contribution claim may therefore be unsupported."
+      ],
+      "hash": "0x0c4e2e8d7670a694042146dc12ab2c0329c5a557d5e9c911a8aa44c7602cea04",
+      "signer": "0x57C5530f96D8639bfDdE047f505ca7248b8C65e5",
+      "createdAt": "2026-10-14T08:47:08.330516+00:00",
+      "receipt": {
+        "hash": "0x0c4e2e8d7670a694042146dc12ab2c0329c5a557d5e9c911a8aa44c7602cea04",
+        "tx_id": "0x0c4e2e8d7670a694042146dc12ab2c0329c5a557d5e9c911a8aa44c7602cea04",
+        "status": 7,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x57C5530f96D8639bfDdE047f505ca7248b8C65e5",
+        "to_address": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "sender": "0x57C5530f96D8639bfDdE047f505ca7248b8C65e5",
+        "recipient": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "origin_address": "0x57C5530f96D8639bfDdE047f505ca7248b8C65e5",
+        "created_at": "2026-10-14T08:47:08.330516+00:00",
+        "leader_only": false,
+        "execution_mode": "NORMAL",
+        "num_of_rounds": "1",
+        "consensus_data": {
+          "votes": {
+            "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+            "0x4404Fb70d490c935758146f42A73DC850FF95C71": "agree",
+            "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "agree",
+            "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree",
+            "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "agree"
+          },
+          "leader_receipt": [
+            {
+              "execution_result": "SUCCESS",
+              "mode": "leader",
+              "vote": null,
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            },
+            {
+              "execution_result": "SUCCESS",
+              "mode": "validator",
+              "vote": "agree",
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            }
+          ]
+        }
+      },
+      "success": true
+    },
+    {
+      "method": "respond_to_challenge",
+      "args": [
+        "cp-browser-v202-001",
+        "https://api.github.com/repos/amzar1st/CredentialProof/commits/76608d0c9b63637a7116154fd551583074a8f9c5",
+        "",
+        "The canonical commit records amzar1st as the GitHub author. This claim concerns account attribution only, not personal authorship, protocol leadership or accreditation."
+      ],
+      "hash": "0xdc3270857632b9021b21d0f95bf40c90896436ad2b75d639aac2691d560cce04",
+      "signer": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+      "createdAt": "2026-10-14T08:48:07.954618+00:00",
+      "receipt": {
+        "hash": "0xdc3270857632b9021b21d0f95bf40c90896436ad2b75d639aac2691d560cce04",
+        "tx_id": "0xdc3270857632b9021b21d0f95bf40c90896436ad2b75d639aac2691d560cce04",
+        "status": 7,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "to_address": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "sender": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "recipient": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "origin_address": "0x2D79B6c43beCE5d75c0eC380f0eBFc95488171F9",
+        "created_at": "2026-10-14T08:48:07.954618+00:00",
+        "leader_only": false,
+        "execution_mode": "NORMAL",
+        "num_of_rounds": "1",
+        "consensus_data": {
+          "votes": {
+            "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "agree",
+            "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "idle",
+            "0x4404Fb70d490c935758146f42A73DC850FF95C71": "agree",
+            "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "idle",
+            "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "agree"
+          },
+          "leader_receipt": [
+            {
+              "execution_result": "SUCCESS",
+              "mode": "leader",
+              "vote": null,
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            },
+            {
+              "execution_result": "SUCCESS",
+              "mode": "validator",
+              "vote": "agree",
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            }
+          ]
+        }
+      },
+      "success": true
+    }
+  ],
+  "status": "IN_PROGRESS",
+  "deploymentTx": "0x838209bde6d02677d8fc409cf7f6442d40e0734436f90d58374e649c2169a862",
+  "claim": {
+    "attempt": 1,
+    "challenge_cursor": 0,
+    "challenge_deadline": 1791967832,
+    "challenges": [
+      {
+        "note": "The earlier documentation disclaims personal authorship. The account contribution claim may therefore be unsupported.",
+        "party": "0x57c5530f96d8639bfdde047f505ca7248b8c65e5",
+        "sha256": "",
+        "url": "https://raw.githubusercontent.com/amzar1st/CredentialProof/76608d0c9b63637a7116154fd551583074a8f9c5/docs/live-verification.md"
+      }
+    ],
+    "created_at": 1791967280,
+    "credential": null,
+    "duplicate_key": "6e68e1a02a29c516a4d021c02b76de57a0433788fb3a07c11fe9f2b123802a03",
+    "evidence": [
+      {
+        "note": "Full canonical commit with account attribution, submitted through Studio browser UI.",
+        "party": "0x2d79b6c43bece5d75c0ec380f0ebfc95488171f9",
+        "sha256": "",
+        "url": "https://api.github.com/repos/amzar1st/CredentialProof/commits/76608d0c9b63637a7116154fd551583074a8f9c5"
+      }
+    ],
+    "history": [],
+    "id": "cp-browser-v202-001",
+    "initial_result": {
+      "citations": [
+        [
+          0
+        ]
+      ],
+      "contradicted": [
+        false
+      ],
+      "groundings": [
+        [
+          {
+            "quote": "\"sha\":\"76608d0c9b63637a7116154fd551583074a8f9c5\"",
+            "source": 0
+          },
+          {
+            "quote": "\"author\":{\"name\":\"amzar1st\",\"email\":\"amzar1st96@gmail.com\"",
+            "source": 0
+          },
+          {
+            "quote": "\"author\":{\"login\":\"amzar1st\",\"id\":30189719,",
+            "source": 0
+          },
+          {
+            "quote": "\"message\":\"Add submission logo matching CredentialProof app branding\"",
+            "source": 0
+          },
+          {
+            "quote": "\"filename\":\"public/credentialproof-logo-1024.png\",\"status\":\"added\"",
+            "source": 0
+          }
+        ]
+      ],
+      "identity_sha256": "7ad86fe8895d050d400a7d5da8fad09273bae2ff82be83052602b7448ac16a7e",
+      "identity_verified": true,
+      "reasoning": "The fetched commit record shows sha 76608d0c9b63637a7116154fd551583074a8f9c5 with author and committer login 'amzar1st' (id 30189719) and commit message 'Add submission logo matching CredentialProof app branding'. The files array confirms a single added file 'public/credentialproof-logo-1024.png'. The statement's claim that the amzar1st GitHub account is the author of commit 76608d0c9b63637a7116154fd551583074a8f9c5 and that it added the CredentialProof submission logo is directly supported by these canonical commit record fields. The description in the statement matches the commit message verbatim except for minor wording differences ('submission logo' vs 'Add submission logo'). Supported.",
+      "sources": [
+        {
+          "attribution": {
+            "description": "Add submission logo matching CredentialProof app branding",
+            "login": "amzar1st",
+            "record": "commit:76608d0c9b63637a7116154fd551583074a8f9c5",
+            "work": "github:amzar1st/credentialproof"
+          },
+          "index": 0,
+          "sha256": "307a1cc19000875f57c4bcb041e3d23f3d7267b535b28593fed475767f0365ba",
+          "url": "https://api.github.com/repos/amzar1st/CredentialProof/commits/76608d0c9b63637a7116154fd551583074a8f9c5",
+          "usable": true
+        }
+      ],
+      "statement_work_keys": [
+        [
+          "github:amzar1st/credentialproof"
+        ]
+      ],
+      "supported": [
+        true
+      ],
+      "verdict": "VERIFIED",
+      "work_keys": [
+        "github:amzar1st/credentialproof"
+      ]
+    },
+    "owner": "0x2d79b6c43bece5d75c0ec380f0ebfc95488171f9",
+    "previous_claim": null,
+    "profile": {
+      "created_at": 1791967182,
+      "display_name": "Studio browser contribution demo",
+      "github_login": "amzar1st",
+      "identity_token": "CredentialProof:0xb79e97c260c54d44d8d074dc888afc9d13bc87a5:0x2d79b6c43bece5d75c0ec380f0ebfc95488171f9:amzar1st",
+      "identity_url": "https://raw.githubusercontent.com/amzar1st/CredentialProof/main/docs/v202-studio-wallet-attestation.txt",
+      "owner": "0x2d79b6c43bece5d75c0ec380f0ebfc95488171f9"
+    },
+    "requested_at": 1791967406,
+    "response_deadline": 1791968132,
+    "responses": [
+      {
+        "batch": 0,
+        "note": "The canonical commit records amzar1st as the GitHub author. This claim concerns account attribution only, not personal authorship, protocol leadership or accreditation.",
+        "party": "0x2d79b6c43bece5d75c0ec380f0ebfc95488171f9",
+        "sha256": "",
+        "url": "https://api.github.com/repos/amzar1st/CredentialProof/commits/76608d0c9b63637a7116154fd551583074a8f9c5"
+      }
+    ],
+    "result": {
+      "citations": [
+        [
+          0
+        ]
+      ],
+      "contradicted": [
+        false
+      ],
+      "groundings": [
+        [
+          {
+            "quote": "\"sha\":\"76608d0c9b63637a7116154fd551583074a8f9c5\"",
+            "source": 0
+          },
+          {
+            "quote": "\"author\":{\"name\":\"amzar1st\",\"email\":\"amzar1st96@gmail.com\"",
+            "source": 0
+          },
+          {
+            "quote": "\"author\":{\"login\":\"amzar1st\",\"id\":30189719,",
+            "source": 0
+          },
+          {
+            "quote": "\"message\":\"Add submission logo matching CredentialProof app branding\"",
+            "source": 0
+          },
+          {
+            "quote": "\"filename\":\"public/credentialproof-logo-1024.png\",\"status\":\"added\"",
+            "source": 0
+          }
+        ]
+      ],
+      "identity_sha256": "7ad86fe8895d050d400a7d5da8fad09273bae2ff82be83052602b7448ac16a7e",
+      "identity_verified": true,
+      "reasoning": "The fetched commit record shows sha 76608d0c9b63637a7116154fd551583074a8f9c5 with author and committer login 'amzar1st' (id 30189719) and commit message 'Add submission logo matching CredentialProof app branding'. The files array confirms a single added file 'public/credentialproof-logo-1024.png'. The statement's claim that the amzar1st GitHub account is the author of commit 76608d0c9b63637a7116154fd551583074a8f9c5 and that it added the CredentialProof submission logo is directly supported by these canonical commit record fields. The description in the statement matches the commit message verbatim except for minor wording differences ('submission logo' vs 'Add submission logo'). Supported.",
+      "sources": [
+        {
+          "attribution": {
+            "description": "Add submission logo matching CredentialProof app branding",
+            "login": "amzar1st",
+            "record": "commit:76608d0c9b63637a7116154fd551583074a8f9c5",
+            "work": "github:amzar1st/credentialproof"
+          },
+          "index": 0,
+          "sha256": "307a1cc19000875f57c4bcb041e3d23f3d7267b535b28593fed475767f0365ba",
+          "url": "https://api.github.com/repos/amzar1st/CredentialProof/commits/76608d0c9b63637a7116154fd551583074a8f9c5",
+          "usable": true
+        }
+      ],
+      "statement_work_keys": [
+        [
+          "github:amzar1st/credentialproof"
+        ]
+      ],
+      "supported": [
+        true
+      ],
+      "verdict": "VERIFIED",
+      "work_keys": [
+        "github:amzar1st/credentialproof"
+      ]
+    },
+    "review_history": [
+      {
+        "at": 1791967532,
+        "attempt": 1,
+        "challenges": [],
+        "evidence": [
+          {
+            "note": "Full canonical commit with account attribution, submitted through Studio browser UI.",
+            "party": "0x2d79b6c43bece5d75c0ec380f0ebfc95488171f9",
+            "sha256": "",
+            "url": "https://api.github.com/repos/amzar1st/CredentialProof/commits/76608d0c9b63637a7116154fd551583074a8f9c5"
+          }
+        ],
+        "kind": "initial",
+        "responses": [],
+        "result": {
+          "citations": [
+            [
+              0
+            ]
+          ],
+          "contradicted": [
+            false
+          ],
+          "groundings": [
+            [
+              {
+                "quote": "\"sha\":\"76608d0c9b63637a7116154fd551583074a8f9c5\"",
+                "source": 0
+              },
+              {
+                "quote": "\"author\":{\"name\":\"amzar1st\",\"email\":\"amzar1st96@gmail.com\"",
+                "source": 0
+              },
+              {
+                "quote": "\"author\":{\"login\":\"amzar1st\",\"id\":30189719,",
+                "source": 0
+              },
+              {
+                "quote": "\"message\":\"Add submission logo matching CredentialProof app branding\"",
+                "source": 0
+              },
+              {
+                "quote": "\"filename\":\"public/credentialproof-logo-1024.png\",\"status\":\"added\"",
+                "source": 0
+              }
+            ]
+          ],
+          "identity_sha256": "7ad86fe8895d050d400a7d5da8fad09273bae2ff82be83052602b7448ac16a7e",
+          "identity_verified": true,
+          "reasoning": "The fetched commit record shows sha 76608d0c9b63637a7116154fd551583074a8f9c5 with author and committer login 'amzar1st' (id 30189719) and commit message 'Add submission logo matching CredentialProof app branding'. The files array confirms a single added file 'public/credentialproof-logo-1024.png'. The statement's claim that the amzar1st GitHub account is the author of commit 76608d0c9b63637a7116154fd551583074a8f9c5 and that it added the CredentialProof submission logo is directly supported by these canonical commit record fields. The description in the statement matches the commit message verbatim except for minor wording differences ('submission logo' vs 'Add submission logo'). Supported.",
+          "sources": [
+            {
+              "attribution": {
+                "description": "Add submission logo matching CredentialProof app branding",
+                "login": "amzar1st",
+                "record": "commit:76608d0c9b63637a7116154fd551583074a8f9c5",
+                "work": "github:amzar1st/credentialproof"
+              },
+              "index": 0,
+              "sha256": "307a1cc19000875f57c4bcb041e3d23f3d7267b535b28593fed475767f0365ba",
+              "url": "https://api.github.com/repos/amzar1st/CredentialProof/commits/76608d0c9b63637a7116154fd551583074a8f9c5",
+              "usable": true
+            }
+          ],
+          "statement_work_keys": [
+            [
+              "github:amzar1st/credentialproof"
+            ]
+          ],
+          "supported": [
+            true
+          ],
+          "verdict": "VERIFIED",
+          "work_keys": [
+            "github:amzar1st/credentialproof"
+          ]
+        }
+      }
+    ],
+    "reviews": 1,
+    "revoked": false,
+    "skill": "Browser contribution verification",
+    "statements": [
+      "The amzar1st GitHub account is recorded as the author of commit 76608d0c9b63637a7116154fd551583074a8f9c5, which added the CredentialProof submission logo."
+    ],
+    "status": "PROVISIONAL",
+    "title": "Browser-built credential with adversarial rebuttal"
+  },
+  "config": {
+    "name": "CredentialProof",
+    "version": "2.0.2",
+    "challenge_seconds": 300,
+    "review_timeout_seconds": 86400,
+    "claimant_capacity": 6,
+    "challenge_batch_size": 4,
+    "claimant_response_capacity": 6,
+    "response_seconds": 300,
+    "maximum_attempts": 3,
+    "source_context_limit": 18000,
+    "challenge_capacity": "open queue; one distinct allegation per wallet per attempt",
+    "credential_transferable": false
+  },
+  "profile": {
+    "created_at": 1791967182,
+    "credentials": [],
+    "display_name": "Studio browser contribution demo",
+    "github_login": "amzar1st",
+    "identity_token": "CredentialProof:0xb79e97c260c54d44d8d074dc888afc9d13bc87a5:0x2d79b6c43bece5d75c0ec380f0ebfc95488171f9:amzar1st",
+    "identity_url": "https://raw.githubusercontent.com/amzar1st/CredentialProof/main/docs/v202-studio-wallet-attestation.txt",
+    "owner": "0x2d79b6c43bece5d75c0ec380f0ebfc95488171f9",
+    "reputation": {
+      "partial": 0,
+      "verified": 0
+    },
+    "reputation_basis": "Unique attributed repositories; paraphrases and skills from the same repository do not increase reputation."
+  },
+  "studioShareUrl": "https://studio.genlayer.com/?import-contract=0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+  "remainingMethods": [
+    "review_challenges",
+    "finalize",
+    "revoke_credential"
+  ],
+  "lastVerifiedAt": "2026-10-14T13:28:02.126Z",
+  "archived": true,
+  "currentVerification": "v202-final-verification.md"
+}

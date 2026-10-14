@@ -4,15 +4,15 @@ GenLayer contribution credentials backed by complete public sources, account att
 
 ## Current deployment
 
-The public app still uses **v2.0.1**. The current `contracts/credential_proof.py` is **v2.0.2 source awaiting deployment**; its additional retained-dispute safeguards are not yet live. The exact deployed source is preserved in [deployed-contract-v201.py](docs/deployed-contract-v201.py), matching the SHA-256 in `v2-deployment.json`.
+The public app uses the finalized **v2.0.2** registry. Current `contracts/credential_proof.py` matches its on-chain source bytes. [Final verification and browser receipts](docs/v202-final-verification.md). The archived v2.0.1 source is preserved in [deployed-contract-v201.py](docs/deployed-contract-v201.py).
 
 - Public review app: https://credentialproof.tinymule33.chatgpt.site
 - GenLayer Studionet, chain ID **61999**, RPC `https://studio.genlayer.com/api`.
-- V2 contract: `0x7E812995198e8C4715EBb96D3F09dF8372f05d66`.
-- [Explorer](https://explorer-studio.genlayer.com/address/0x7E812995198e8C4715EBb96D3F09dF8372f05d66).
-- [Finalized v2 deployment](https://explorer-studio.genlayer.com/tx/0xceabf8e9227ae47962fc8126f49c5bb1247bc74ebb810628da004f3db6e3749a).
-- Demo challenge window: 60 seconds, followed by a separate 60-second claimant response window. Default deployments use one day for each; review timeout is one day.
-- Deployment receipt, source hash and finalized configuration: [v2-deployment.json](docs/v2-deployment.json).
+- V2 contract: `0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5`.
+- [Explorer](https://explorer-studio.genlayer.com/address/0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5).
+- [Finalized v2 deployment](https://explorer-studio.genlayer.com/tx/0x838209bde6d02677d8fc409cf7f6442d40e0734436f90d58374e649c2169a862).
+- Demo challenge window: 300 seconds, followed by a separate 300-second claimant response window. Default deployments use one day for each; review timeout is one day.
+- Deployment receipt, source hash and finalized configuration: [v202-browser-deployment.json](docs/v202-browser-deployment.json).
 
 This is a **new contract and a new public Site**, not an in-place upgrade of the old registry. V1 records remain in the original contract; they are not migrated or counted in v2. Original October 3 proof is retained in `docs/live-verification.*` and explicitly concerns v1.
 
@@ -30,7 +30,7 @@ The queue improves access without legal-identity checks. It does **not** establi
 
 ## Recovery without erasing history
 
-`retry_claim(claim_id, evidence_json)` allows the owner of a rejected or cancelled claim to supply 1–6 replacement sources and return to draft. Prior evidence, rebuttals, results and timing are archived on chain; review history is append-only. Statements and claim identity do not change. Maximum three attempts per claim. In the pending v2.0.2 source, removed originals and rebuttals become mandatory queued context, and prior challenge commitments remain mandatory even if their URL is supplied in the replacement set. Every inherited batch must be reviewed before issuance; a controlled new-ID resubmission links its predecessor and carries that context too.
+`retry_claim(claim_id, evidence_json)` allows the owner of a rejected or cancelled claim to supply 1–6 replacement sources and return to draft. Prior evidence, rebuttals, results and timing are archived on chain; review history is append-only. Statements and claim identity do not change. Maximum three attempts per claim. In v2.0.2, removed originals and rebuttals become mandatory queued context, and prior challenge commitments remain mandatory even if their URL is supplied in the replacement set. Every inherited batch must be reviewed before issuance; a controlled new-ID resubmission links its predecessor and carries that context too.
 
 An identical statement fingerprint is reserved only by an active claim or issued credential. A terminal unsuccessful claim may instead be resubmitted under a new ID; the old record remains visible. A newer resubmission prevents reopening the older claim. The profile has a 100-record limit. Issued and revoked credentials cannot reset themselves through retries.
 
@@ -81,11 +81,11 @@ npm run build
 The expanded suite has 48 behavioral cases against gltest's real pinned Python SDK v0.2.16, mocking only external sources/model answers, and eight frontend receipt/wallet tests. These checks are distinct from live consensus and browser verification.
 
 - `scripts/deploy-v2.mjs`: resumable full-consensus deployment with source-hash check and finalized configuration.
-- `scripts/live-v2.mjs`: resumable SDK demonstrations of partial issuance, adversarial challenge with claimant response, unavailable-source recovery, unsupported authorship rejection and revocation. Public checkpoints: `docs/v2-live-proof.json`. Only partial issuance and adversarial challenge/rebuttal are confirmed on the current deployment. Recovery claim registration failed execution because it duplicated an active fingerprint; recovery, unsupported-authorship rejection and revocation are not yet established live.
+- `scripts/live-v2.mjs`: resumable SDK demonstrations of partial issuance, adversarial challenge with claimant response, unavailable-source recovery, unsupported authorship rejection and revocation. Public checkpoints: `docs/v2-live-proof.json`. Recovery, genuine partial scope, unsupported-authorship rejection and the full Studio browser-wallet issuance/revocation case are finalized on the current registry; see the final evidence matrix.
 - [Steward response and verification limits](docs/steward-response-v2.md).
 
 Scripts use fixed case IDs and checkpoint receipts. Keep local test-key files until a run completes; do not reuse the same deployment checkpoint for altered source or erase checkpoints to force duplicate transactions. Normal network finality may outlast a 60-second demo window; production review periods must be much longer.
 
-This Studionet prototype has no independent security audit and does not provide legal professional accreditation. Development-chain state can reset. Public evidence can contain personal data: use appropriately redacted sources. Browser-originated end-to-end verification must be recorded separately from SDK tests; the existing v1 Studio demonstration does not prove the new browser flow.
+This Studionet prototype has no independent security audit and does not provide legal professional accreditation. Development-chain state can reset. Public evidence can contain personal data: use appropriately redacted sources. The complete v2.0.2 Studio browser-wallet journey is recorded separately from mixed SDK/browser recovery and partial-credential proof.
 
-The next deployment and SDK writes were blocked by automatic approval review in the resumed session. See [resume checklist](docs/resume-checklist.md) for the exact remaining actions and checkpoint configuration.
+The current deployment and browser-wallet verification are complete. Earlier approval blockage and failed/interrupted runs are preserved as historical observations; [final verification](docs/v202-final-verification.md) is authoritative for current results.

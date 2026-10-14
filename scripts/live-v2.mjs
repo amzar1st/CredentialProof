@@ -12,6 +12,7 @@ let second;try{second=JSON.parse(await fs.readFile(challengerPath,'utf8'));}catc
 const challenger=privateKeyToAccount(second.privateKey),counter=createClient({chain:studionet,account:challenger});
 const proofPath=process.env.CP_PROOF_PATH || 'docs/v2-live-proof.json';
 let proof;try{proof=JSON.parse(await fs.readFile(proofPath,'utf8'));}catch(e){if(e.code!=='ENOENT')throw e;proof={contract:deployment.address,network:'Studionet',origin:'Node SDK test accounts, not browser/MetaMask',owner:owner.address,challenger:challenger.address,transactions:[],cases:{},startedAt:new Date().toISOString()};}
+if(proof.owner.toLowerCase()!==owner.address.toLowerCase())throw Error('Live-proof checkpoint belongs to a different owner wallet; choose a fresh checkpoint rather than replacing its signer.');
 if(proof.contract!==deployment.address)throw Error('Live-proof checkpoint belongs to a different contract; choose a new CP_PROOF_PATH.');
 const save=()=>fs.writeFile(proofPath,JSON.stringify(proof,null,2)+'\n');
 const SOURCE='https://api.github.com/repos/amzar1st/CredentialProof/commits/76608d0c9b63637a7116154fd551583074a8f9c5';
@@ -45,10 +46,14 @@ await client.request({method:'sim_fundAccount',params:[challenger.address,1e20]}
 await tx('profile','create_profile',['Amzar account attribution demo','amzar1st',IDENTITY]);
 const prefix=process.env.CP_CASE_PREFIX || 'cp-v21';
 const ids={partial:prefix+'-partial-001',challenge:prefix+'-rebuttal-001',recovery:prefix+'-recovery-001',unsupported:prefix+'-authorship-001'};
+const scenarios=new Set((process.env.CP_SCENARIOS || 'partial,challenge,recovery,unsupported').split(','));
+if(scenarios.has('partial')){
 let partial=await setup(ids.partial,'Narrow account contribution, unsupported leadership',[statement,'The account holder personally led all development of the GenLayer protocol.'],SOURCE);
 await waitUntil(partial.challenge_deadline);await tx('partial:finalize','finalize',[ids.partial]);
 partial=await read(ids.partial);proof.cases[ids.partial]=partial;await save();
 if(partial.result.verdict!=='PARTIALLY_VERIFIED'||partial.credential?.scope.length!==1)throw Error('Partial live review did not match expected evidence; inspect proof without claiming success.');
+}
+if(scenarios.has('challenge')){
 let dispute=await setup(ids.challenge,'Adversarial account-attribution challenge',[statement],SOURCE);
 if(dispute.result.verdict!=='VERIFIED')throw Error('Initial attribution verification did not succeed');
 await tx('challenge:submit','challenge_claim',[ids.challenge,DOC,'','The earlier documentation disclaims personal authorship. The account contribution claim may therefore be unsupported.'],counter);
@@ -56,6 +61,8 @@ await tx('challenge:respond','respond_to_challenge',[ids.challenge,SOURCE,'','Th
 dispute=await read(ids.challenge);await waitUntil(dispute.response_deadline);await tx('challenge:review','review_challenges',[ids.challenge]);await tx('challenge:finalize','finalize',[ids.challenge]);
 dispute=await read(ids.challenge);proof.cases[ids.challenge]=dispute;await save();
 if(dispute.status!=='ISSUED'||dispute.responses.length!==1)throw Error('Adversarial live review did not establish the expected supported outcome.');
+}
+if(scenarios.has('recovery')){
 let recovered=await setup(ids.recovery,'Recovery from unavailable source',[statement],MISSING);
 await waitUntil(recovered.challenge_deadline);await tx('recovery:reject','finalize',[ids.recovery]);
 await tx('recovery:retry','retry_claim',[ids.recovery,JSON.stringify([{url:SOURCE,sha256:'',note:'Recovered complete authoritative commit record'}])]);
@@ -65,10 +72,14 @@ if(recovered.challenges.length){await tx('recovery:respond','respond_to_challeng
 await waitUntil(recovered.challenge_deadline);await tx('recovery:finalize','finalize',[ids.recovery]);
 recovered=await read(ids.recovery);proof.cases[ids.recovery]=recovered;await save();
 if(recovered.status!=='ISSUED'||recovered.history.length!==1)throw Error('Recovery workflow did not issue credential');
+}
+if(scenarios.has('unsupported')){
 let unsupported=await setup(ids.unsupported,'Unsupported personal authorship',['The amzar1st account holder personally authored every line of the GenLayer protocol implementation and led its engineering team.'],DOC);
 await waitUntil(unsupported.challenge_deadline);await tx('unsupported:finalize','finalize',[ids.unsupported]);
 unsupported=await read(ids.unsupported);proof.cases[ids.unsupported]=unsupported;await save();
 if(unsupported.status!=='REJECTED')throw Error('Unsupported authorship unexpectedly issued; inspect contract');
-await tx('credential:revoke','revoke_credential',[ids.challenge]);proof.cases[ids.challenge]=await read(ids.challenge);
+}
+const revokeId=scenarios.has('challenge')?ids.challenge:scenarios.has('recovery')?ids.recovery:null;
+if(revokeId){proof.beforeRevocation=await read(revokeId);await save();await tx('credential:revoke','revoke_credential',[revokeId]);proof.cases[revokeId]=await read(revokeId);if(!proof.cases[revokeId].revoked)throw Error('Revocation not reflected in finalized state');}
 proof.profile=JSON.parse(await client.readContract({address:deployment.address,functionName:'get_profile',args:[owner.address],transactionHashVariant:'LATEST_FINAL'}));
-proof.completedAt=new Date().toISOString();await save();console.log('All four SDK live scenarios verified. Browser-originated verification remains separate.');
+proof.completedAt=new Date().toISOString();await save();proof.scenarios=[...scenarios];await save();console.log('Selected SDK live scenarios verified:',[...scenarios].join(','),'. Browser-originated verification remains separate.');

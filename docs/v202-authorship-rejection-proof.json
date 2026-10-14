@@ -1,0 +1,462 @@
+{
+  "network": "Studionet",
+  "contract": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+  "origin": "GenLayer Studio browser UI, built-in wallet",
+  "status": "COMPLETE",
+  "claim": {
+    "attempt": 1,
+    "challenge_cursor": 0,
+    "challenge_deadline": 1791985872,
+    "challenges": [],
+    "created_at": 1791985017,
+    "credential": null,
+    "duplicate_key": "5e5ffd54c914d5fed39666dcfdb678c0d455e28ea584cbc58e2ee9b5579ef1e4",
+    "evidence": [
+      {
+        "note": "Documentation does not establish personal protocol authorship or leadership.",
+        "party": "0xab7a330c08e77933e9c86bf6b4bb3fc5e496c0cf",
+        "sha256": "",
+        "url": "https://raw.githubusercontent.com/amzar1st/CredentialProof/76608d0c9b63637a7116154fd551583074a8f9c5/docs/live-verification.md"
+      }
+    ],
+    "finalized_at": 1791986461,
+    "history": [],
+    "id": "cp-browser-v202-authorship-001",
+    "initial_result": {
+      "citations": [
+        [
+          0
+        ]
+      ],
+      "contradicted": [
+        true
+      ],
+      "groundings": [
+        [
+          {
+            "quote": "This does not certify personal authorship, employment or professional licensing.",
+            "source": 0
+          },
+          {
+            "quote": "the amzar1st GitHub account published the CredentialProof Python contract containing profile creation, evidence review and credential finalization methods.",
+            "source": 0
+          }
+        ]
+      ],
+      "identity_sha256": "8750be04b480f0205a9cef53bfde73b24446782f92db4ecfaa720d326dce6a02",
+      "identity_verified": true,
+      "reasoning": "The statement makes two distinct claims: (1) that the account holder personally authored every line of the GenLayer protocol implementation, and (2) that they led its engineering team. Both are contradicted by the fetched evidence. Page 0 explicitly states 'This does not certify personal authorship, employment or professional licensing,' directly negating the personal authorship and leadership claims. Furthermore, the page only attributes publishing of the CredentialProof Python contract to the amzar1st GitHub account — a narrow scoped contribution to a demo contract — not authorship of the GenLayer protocol implementation itself, which is a separate, much broader project. There is no evidence of team leadership or engineering team responsibility anywhere in the fetched text. The statement is therefore contradicted on both its material parts.",
+      "sources": [
+        {
+          "attribution": null,
+          "index": 0,
+          "sha256": "4fc8dea771c9d561a5c60617fd3e93b3d01423062ebbb67a15531c35e0403acc",
+          "url": "https://raw.githubusercontent.com/amzar1st/CredentialProof/76608d0c9b63637a7116154fd551583074a8f9c5/docs/live-verification.md",
+          "usable": true
+        }
+      ],
+      "statement_work_keys": [
+        []
+      ],
+      "supported": [
+        false
+      ],
+      "verdict": "EVIDENCE_CONFLICT",
+      "work_keys": []
+    },
+    "owner": "0xab7a330c08e77933e9c86bf6b4bb3fc5e496c0cf",
+    "previous_claim": null,
+    "profile": {
+      "created_at": 1791984697,
+      "display_name": "Resumed Studio browser contribution demo",
+      "github_login": "amzar1st",
+      "identity_token": "CredentialProof:0xb79e97c260c54d44d8d074dc888afc9d13bc87a5:0xab7a330c08e77933e9c86bf6b4bb3fc5e496c0cf:amzar1st",
+      "identity_url": "https://raw.githubusercontent.com/amzar1st/CredentialProof/main/docs/v202-studio-resumed-wallet-attestation.txt",
+      "owner": "0xab7a330c08e77933e9c86bf6b4bb3fc5e496c0cf"
+    },
+    "requested_at": 1791985227,
+    "response_deadline": 0,
+    "responses": [],
+    "result": {
+      "citations": [
+        [
+          0
+        ]
+      ],
+      "contradicted": [
+        true
+      ],
+      "groundings": [
+        [
+          {
+            "quote": "This does not certify personal authorship, employment or professional licensing.",
+            "source": 0
+          },
+          {
+            "quote": "the amzar1st GitHub account published the CredentialProof Python contract containing profile creation, evidence review and credential finalization methods.",
+            "source": 0
+          }
+        ]
+      ],
+      "identity_sha256": "8750be04b480f0205a9cef53bfde73b24446782f92db4ecfaa720d326dce6a02",
+      "identity_verified": true,
+      "reasoning": "The statement makes two distinct claims: (1) that the account holder personally authored every line of the GenLayer protocol implementation, and (2) that they led its engineering team. Both are contradicted by the fetched evidence. Page 0 explicitly states 'This does not certify personal authorship, employment or professional licensing,' directly negating the personal authorship and leadership claims. Furthermore, the page only attributes publishing of the CredentialProof Python contract to the amzar1st GitHub account — a narrow scoped contribution to a demo contract — not authorship of the GenLayer protocol implementation itself, which is a separate, much broader project. There is no evidence of team leadership or engineering team responsibility anywhere in the fetched text. The statement is therefore contradicted on both its material parts.",
+      "sources": [
+        {
+          "attribution": null,
+          "index": 0,
+          "sha256": "4fc8dea771c9d561a5c60617fd3e93b3d01423062ebbb67a15531c35e0403acc",
+          "url": "https://raw.githubusercontent.com/amzar1st/CredentialProof/76608d0c9b63637a7116154fd551583074a8f9c5/docs/live-verification.md",
+          "usable": true
+        }
+      ],
+      "statement_work_keys": [
+        []
+      ],
+      "supported": [
+        false
+      ],
+      "verdict": "EVIDENCE_CONFLICT",
+      "work_keys": []
+    },
+    "review_history": [
+      {
+        "at": 1791985572,
+        "attempt": 1,
+        "challenges": [],
+        "evidence": [
+          {
+            "note": "Documentation does not establish personal protocol authorship or leadership.",
+            "party": "0xab7a330c08e77933e9c86bf6b4bb3fc5e496c0cf",
+            "sha256": "",
+            "url": "https://raw.githubusercontent.com/amzar1st/CredentialProof/76608d0c9b63637a7116154fd551583074a8f9c5/docs/live-verification.md"
+          }
+        ],
+        "kind": "initial",
+        "responses": [],
+        "result": {
+          "citations": [
+            [
+              0
+            ]
+          ],
+          "contradicted": [
+            true
+          ],
+          "groundings": [
+            [
+              {
+                "quote": "This does not certify personal authorship, employment or professional licensing.",
+                "source": 0
+              },
+              {
+                "quote": "the amzar1st GitHub account published the CredentialProof Python contract containing profile creation, evidence review and credential finalization methods.",
+                "source": 0
+              }
+            ]
+          ],
+          "identity_sha256": "8750be04b480f0205a9cef53bfde73b24446782f92db4ecfaa720d326dce6a02",
+          "identity_verified": true,
+          "reasoning": "The statement makes two distinct claims: (1) that the account holder personally authored every line of the GenLayer protocol implementation, and (2) that they led its engineering team. Both are contradicted by the fetched evidence. Page 0 explicitly states 'This does not certify personal authorship, employment or professional licensing,' directly negating the personal authorship and leadership claims. Furthermore, the page only attributes publishing of the CredentialProof Python contract to the amzar1st GitHub account — a narrow scoped contribution to a demo contract — not authorship of the GenLayer protocol implementation itself, which is a separate, much broader project. There is no evidence of team leadership or engineering team responsibility anywhere in the fetched text. The statement is therefore contradicted on both its material parts.",
+          "sources": [
+            {
+              "attribution": null,
+              "index": 0,
+              "sha256": "4fc8dea771c9d561a5c60617fd3e93b3d01423062ebbb67a15531c35e0403acc",
+              "url": "https://raw.githubusercontent.com/amzar1st/CredentialProof/76608d0c9b63637a7116154fd551583074a8f9c5/docs/live-verification.md",
+              "usable": true
+            }
+          ],
+          "statement_work_keys": [
+            []
+          ],
+          "supported": [
+            false
+          ],
+          "verdict": "EVIDENCE_CONFLICT",
+          "work_keys": []
+        }
+      }
+    ],
+    "reviews": 1,
+    "revoked": false,
+    "skill": "Unsupported authorship test",
+    "statements": [
+      "The amzar1st account holder personally authored every line of the GenLayer protocol implementation and led its engineering team."
+    ],
+    "status": "REJECTED",
+    "title": "Unsupported personal authorship rejection test"
+  },
+  "transactions": [
+    {
+      "method": "submit_claim",
+      "args": [
+        "cp-browser-v202-authorship-001",
+        "Unsupported personal authorship rejection test",
+        "Unsupported authorship test",
+        "[\"The amzar1st account holder personally authored every line of the GenLayer protocol implementation and led its engineering team.\"]"
+      ],
+      "hash": "0x9ecc5a09a6200cedf687fabfddd5e89237607f8e3aba6fa2a09da69e29b9379e",
+      "signer": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+      "receipt": {
+        "hash": "0x9ecc5a09a6200cedf687fabfddd5e89237607f8e3aba6fa2a09da69e29b9379e",
+        "tx_id": "0x9ecc5a09a6200cedf687fabfddd5e89237607f8e3aba6fa2a09da69e29b9379e",
+        "status": 7,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+        "to_address": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "sender": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+        "recipient": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "origin_address": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+        "created_at": "2026-10-14T13:36:57.012521+00:00",
+        "leader_only": false,
+        "execution_mode": "NORMAL",
+        "num_of_rounds": "1",
+        "consensus_data": {
+          "votes": {
+            "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "idle",
+            "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+            "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "agree",
+            "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree",
+            "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "idle"
+          },
+          "leader_receipt": [
+            {
+              "execution_result": "SUCCESS",
+              "mode": "leader",
+              "vote": null,
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            },
+            {
+              "execution_result": "SUCCESS",
+              "mode": "validator",
+              "vote": "agree",
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            }
+          ]
+        }
+      },
+      "success": true
+    },
+    {
+      "method": "attach_evidence",
+      "args": [
+        "cp-browser-v202-authorship-001",
+        "https://raw.githubusercontent.com/amzar1st/CredentialProof/76608d0c9b63637a7116154fd551583074a8f9c5/docs/live-verification.md",
+        "",
+        "Documentation does not establish personal protocol authorship or leadership."
+      ],
+      "hash": "0x637fe1d70bb06d5a377b240cfbe501cad5ba5eafa7f1f3989072c232ca86156e",
+      "signer": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+      "receipt": {
+        "hash": "0x637fe1d70bb06d5a377b240cfbe501cad5ba5eafa7f1f3989072c232ca86156e",
+        "tx_id": "0x637fe1d70bb06d5a377b240cfbe501cad5ba5eafa7f1f3989072c232ca86156e",
+        "status": 7,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+        "to_address": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "sender": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+        "recipient": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "origin_address": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+        "created_at": "2026-10-14T13:39:28.933789+00:00",
+        "leader_only": false,
+        "execution_mode": "NORMAL",
+        "num_of_rounds": "1",
+        "consensus_data": {
+          "votes": {
+            "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "idle",
+            "0x4404Fb70d490c935758146f42A73DC850FF95C71": "idle",
+            "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+            "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree",
+            "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "agree"
+          },
+          "leader_receipt": [
+            {
+              "execution_result": "SUCCESS",
+              "mode": "leader",
+              "vote": null,
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            },
+            {
+              "execution_result": "ERROR",
+              "mode": "validator",
+              "vote": "idle",
+              "genvm_result": {
+                "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+              }
+            }
+          ]
+        }
+      },
+      "success": true
+    },
+    {
+      "method": "request_verification",
+      "args": [
+        "cp-browser-v202-authorship-001"
+      ],
+      "hash": "0xdacc012702b60d750b5cac8446b2d2011946a56ee64ed2cdc0ab9d872b1faee5",
+      "signer": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+      "receipt": {
+        "hash": "0xdacc012702b60d750b5cac8446b2d2011946a56ee64ed2cdc0ab9d872b1faee5",
+        "tx_id": "0xdacc012702b60d750b5cac8446b2d2011946a56ee64ed2cdc0ab9d872b1faee5",
+        "status": 7,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+        "to_address": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "sender": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+        "recipient": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "origin_address": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+        "created_at": "2026-10-14T13:40:27.430170+00:00",
+        "leader_only": false,
+        "execution_mode": "NORMAL",
+        "num_of_rounds": "1",
+        "consensus_data": {
+          "votes": {
+            "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+            "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "agree",
+            "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "idle",
+            "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "idle",
+            "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "agree"
+          },
+          "leader_receipt": [
+            {
+              "execution_result": "SUCCESS",
+              "mode": "leader",
+              "vote": null,
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            },
+            {
+              "execution_result": "SUCCESS",
+              "mode": "validator",
+              "vote": "agree",
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            }
+          ]
+        }
+      },
+      "success": true
+    },
+    {
+      "method": "validator_review",
+      "args": [
+        "cp-browser-v202-authorship-001"
+      ],
+      "hash": "0x35837a8f38c9b82129c8650eba5702c6e5e5b7f6ec51623f36068bd863f111c2",
+      "signer": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+      "receipt": {
+        "hash": "0x35837a8f38c9b82129c8650eba5702c6e5e5b7f6ec51623f36068bd863f111c2",
+        "tx_id": "0x35837a8f38c9b82129c8650eba5702c6e5e5b7f6ec51623f36068bd863f111c2",
+        "status": 7,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+        "to_address": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "sender": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+        "recipient": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "origin_address": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+        "created_at": "2026-10-14T13:46:12.868889+00:00",
+        "leader_only": false,
+        "execution_mode": "NORMAL",
+        "num_of_rounds": "3",
+        "consensus_data": {
+          "votes": {
+            "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "agree",
+            "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "agree",
+            "0x4404Fb70d490c935758146f42A73DC850FF95C71": "agree",
+            "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "idle",
+            "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "idle"
+          },
+          "leader_receipt": [
+            {
+              "execution_result": "SUCCESS",
+              "mode": "leader",
+              "vote": null,
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            },
+            {
+              "execution_result": "SUCCESS",
+              "mode": "validator",
+              "vote": "agree",
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            }
+          ]
+        }
+      },
+      "success": true
+    },
+    {
+      "method": "finalize",
+      "args": [
+        "cp-browser-v202-authorship-001"
+      ],
+      "hash": "0x0ecc83ef96c6602fdfe3083b63129c3e3f8b9ed4540bff1255bf6f589ab7e130",
+      "signer": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+      "receipt": {
+        "hash": "0x0ecc83ef96c6602fdfe3083b63129c3e3f8b9ed4540bff1255bf6f589ab7e130",
+        "tx_id": "0x0ecc83ef96c6602fdfe3083b63129c3e3f8b9ed4540bff1255bf6f589ab7e130",
+        "status": 7,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+        "to_address": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "sender": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+        "recipient": "0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5",
+        "origin_address": "0xAb7a330C08E77933e9C86Bf6b4bB3fC5e496C0Cf",
+        "created_at": "2026-10-14T14:01:01.848926+00:00",
+        "leader_only": false,
+        "execution_mode": "NORMAL",
+        "num_of_rounds": "1",
+        "consensus_data": {
+          "votes": {
+            "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "idle",
+            "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "idle",
+            "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "agree",
+            "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "agree",
+            "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree"
+          },
+          "leader_receipt": [
+            {
+              "execution_result": "SUCCESS",
+              "mode": "leader",
+              "vote": null,
+              "genvm_result": {
+                "error_code": null,
+                "error_description": null
+              }
+            },
+            {
+              "execution_result": "ERROR",
+              "mode": "validator",
+              "vote": "idle",
+              "genvm_result": {
+                "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+              }
+            }
+          ]
+        }
+      },
+      "success": true
+    }
+  ],
+  "verifiedAt": "2026-10-14T14:11:26.242Z"
+}

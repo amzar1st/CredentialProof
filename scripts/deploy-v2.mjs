@@ -5,6 +5,8 @@ import {createClient} from 'genlayer-js';
 import {studionet} from 'genlayer-js/chains';
 import {generatePrivateKey, privateKeyToAccount} from 'viem/accounts';
 import {assertSuccessfulReceipt} from '../src/chain.js';
+const challengeSeconds=Number(process.env.CP_DEMO_WINDOW_SECONDS || 300);
+if(!Number.isSafeInteger(challengeSeconds)||challengeSeconds<60||challengeSeconds>86400)throw Error('CP_DEMO_WINDOW_SECONDS must be an integer from 60 to 86400');
 const keyPath=process.env.CP_TEST_KEY_PATH || '/tmp/credentialproof-v2-test-key.json';
 let secret;
 try{secret=JSON.parse(await fs.readFile(keyPath,'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;secret={privateKey:generatePrivateKey()};await fs.writeFile(keyPath,JSON.stringify(secret),{mode:0o600});}
@@ -19,8 +21,8 @@ const digest=createHash('sha256').update(code).digest('hex');
 if(record && record.sourceSha256!==digest)throw Error('Source changed after deployment submission; inspect checkpoint before deploying again.');
 if(!record){
  await client.request({method:'sim_fundAccount',params:[account.address,1e20]});
- const hash=await client.deployContract({code,args:[60],leaderOnly:false});
- record={network:'Studionet',chainId:61999,rpc:'https://studio.genlayer.com/api',deploymentTx:hash,sourceSha256:digest,deployer:account.address,challengeSeconds:60,responseSeconds:60,submittedAt:new Date().toISOString()};
+ const hash=await client.deployContract({code,args:[challengeSeconds],leaderOnly:false});
+ record={network:'Studionet',chainId:61999,rpc:'https://studio.genlayer.com/api',deploymentTx:hash,sourceSha256:digest,deployer:account.address,challengeSeconds,responseSeconds:challengeSeconds,submittedAt:new Date().toISOString()};
  await fs.writeFile(checkpoint,JSON.stringify(record,null,2)+'\n');console.log('Submitted',hash);
 }
 const receipt=await client.waitForTransactionReceipt({hash:record.deploymentTx,status:'FINALIZED',interval:3000,retries:200});

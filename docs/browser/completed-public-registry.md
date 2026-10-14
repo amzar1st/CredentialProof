@@ -1,0 +1,164 @@
+- banner:
+  - link "CredentialProof":
+    - /url: /
+    - generic: CredentialProof
+  - navigation:
+    - link "Source ↗":
+      - /url: https://github.com/amzar1st/CredentialProof
+    - link "Contract ↗":
+      - /url: https://explorer-studio.genlayer.com/address/0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5
+    - button "Use browser wallet"
+- main:
+  - generic: PROFESSIONAL CREDENTIAL REGISTRY
+  - heading "Your work. The evidence to prove it." [level=1]:
+    - text: Your work.
+    - emphasis: The evidence to prove it.
+  - paragraph:
+    - text: Public contributions, reviewed by GenLayer validators.
+    - text: Credentials carry the evidence and the exact scope verified.
+  - figure "Animated illustration of an evidence-backed credential":
+    - img "A credential document connected to public evidence and validator nodes":
+      - generic: CREDENTIAL PROOF
+      - generic: Work with proof.
+      - generic: PUBLIC EVIDENCE
+    - generic: Illustration · evidence connected to your work
+  - text: GenLayer Studionet DEVELOPMENT
+  - generic: Connected · finalized state
+  - link "Use Studio’s built-in wallet ↗":
+    - /url: https://studio.genlayer.com/?import-contract=0xB79e97C260C54d44d8D074Dc888AFC9d13BC87a5
+  - generic: "5"
+  - generic: Claims in registry
+  - generic: "3"
+  - generic: Active credentials on this page
+  - generic: "0"
+  - generic: Under review on this page
+  - generic: 300s
+  - generic: Challenge window · separate rebuttal window
+  - heading "Contribution registry" [level=2]
+  - button "↻ Refresh"
+  - generic: ⌕
+  - textbox "Search claims on this page":
+    - /placeholder: Search this page by skill, name or claim
+  - button "AM Studio browser contribution demo @amzar1st ISSUED Browser-built credential with adversarial rebuttal Browser contribution verification 1 source · cp-browser-v202-001":
+    - generic: AM
+    - strong: Studio browser contribution demo
+    - generic: "@amzar1st"
+    - generic: ISSUED
+    - heading "Browser-built credential with adversarial rebuttal" [level=3]
+    - generic: Browser contribution verification
+    - generic: 1 source · cp-browser-v202-001
+  - button "AM Amzar account attribution demo @amzar1st ISSUED Recovery from unavailable source Recovery from unavailable source 1 source · cp-v202-live-recovery-001":
+    - generic: AM
+    - strong: Amzar account attribution demo
+    - generic: "@amzar1st"
+    - generic: ISSUED
+    - heading "Recovery from unavailable source" [level=3]
+    - generic: Recovery from unavailable source
+    - generic: 1 source · cp-v202-live-recovery-001
+  - button "AM Amzar account attribution demo @amzar1st ISSUED Narrow account contribution, unsupported leadership Narrow account contribution, unsupported leadership 1 source · cp-v202-live-partial-001":
+    - generic: AM
+    - strong: Amzar account attribution demo
+    - generic: "@amzar1st"
+    - generic: ISSUED
+    - heading "Narrow account contribution, unsupported leadership" [level=3]
+    - generic: Narrow account contribution, unsupported leadership
+    - generic: 1 source · cp-v202-live-partial-001
+  - button "AM Resumed Studio browser contribution demo @amzar1st REVOKED Complete browser-wallet credential lifecycle Account-attributed contribution 1 source · cp-browser-v202-002":
+    - generic: AM
+    - strong: Resumed Studio browser contribution demo
+    - generic: "@amzar1st"
+    - generic: REVOKED
+    - heading "Complete browser-wallet credential lifecycle" [level=3]
+    - generic: Account-attributed contribution
+    - generic: 1 source · cp-browser-v202-002
+  - button "AM Resumed Studio browser contribution demo @amzar1st REJECTED Unsupported personal authorship rejection test Unsupported authorship test 1 source · cp-browser-v202-authorship-001":
+    - generic: AM
+    - strong: Resumed Studio browser contribution demo
+    - generic: "@amzar1st"
+    - generic: REJECTED
+    - heading "Unsupported personal authorship rejection test" [level=3]
+    - generic: Unsupported authorship test
+    - generic: 1 source · cp-browser-v202-authorship-001
+  - button "← Previous" [disabled]
+  - generic: 1–5 of 5
+  - button "Next →" [disabled]
+  - heading "Verify a profile" [level=3]
+  - paragraph: Reputation counts distinct attributed repositories. Multiple skills or paraphrases of the same work count once.
+  - textbox "Profile wallet address":
+    - /placeholder: 0x… profile wallet address
+  - button "Read profile"
+  - complementary:
+    - heading "Claim workspace" [level=2]
+    - generic: LIVE
+    - text: cp-browser-v202-002
+    - heading "Complete browser-wallet credential lifecycle" [level=3]
+    - generic: REVOKED
+    - paragraph: "@amzar1st · 0xab7a…c0cf"
+    - heading "Submitted statements" [level=4]
+    - list:
+      - text: The amzar1st GitHub account is recorded as the author of commit 76608d0c9b63637a7116154fd551583074a8f9c5, which added the CredentialProof submission logo.
+      - generic: Supported
+    - paragraph: Attempt 1 · 0 prior attempts preserved
+    - heading "Public evidence" [level=4]
+    - link "api.github.com ↗":
+      - /url: https://api.github.com/repos/amzar1st/CredentialProof/commits/76608d0c9b63637a7116154fd551583074a8f9c5
+    - generic: Complete canonical account-attributed commit, submitted through the Studio interface.
+    - code: Content hash not committed
+    - generic: Fetched and usable
+    - heading "Validator decision" [level=4]
+    - strong: VERIFIED
+    - paragraph: The statement claims that the GitHub account 'amzar1st' is recorded as the author of commit 76608d0c9b63637a7116154fd551583074a8f9c5, which added the CredentialProof submission logo. The fetched page data confirms that the commit was authored and committed by 'amzar1st' with the email 'amzar1st96@gmail.com'. Additionally, the commit message explicitly states 'Add submission logo matching CredentialProof app branding', confirming the action described in the statement. Therefore, the statement is supported by the evidence.
+    - text: Application decision finalized
+    - paragraph:
+      - text: Challenge window closes
+      - strong: 14/10/2026, 19:15:07
+    - heading "Counter-evidence (1)" [level=4]
+    - link "0xdb3f…0d3f ↗":
+      - /url: https://raw.githubusercontent.com/amzar1st/CredentialProof/76608d0c9b63637a7116154fd551583074a8f9c5/docs/live-verification.md
+    - paragraph: The earlier documentation disclaims personal authorship. The claimed account contribution may therefore be unsupported.
+    - paragraph:
+      - text: Claimant response closes
+      - strong: 14/10/2026, 19:20:07
+      - text: "· challenge queue processed: 1/1"
+    - heading "Claimant rebuttal (1)" [level=4]
+    - link "Response · batch 0 ↗":
+      - /url: https://api.github.com/repos/amzar1st/CredentialProof/commits/76608d0c9b63637a7116154fd551583074a8f9c5
+    - paragraph: The canonical commit records amzar1st as the GitHub author. The credential is limited to account attribution and does not establish personal authorship, protocol leadership or accreditation.
+    - heading "Statement grounding" [level=4]
+    - strong: Statement 1
+    - blockquote: "\"author\":{\"name\":\"amzar1st\",\"email\":\"amzar1st96@gmail.com\",\"date\":\"2026-10-03T17:49:55Z\"}"
+    - generic: Fetched source 0
+    - blockquote: "\"committer\":{\"name\":\"amzar1st\",\"email\":\"amzar1st96@gmail.com\",\"date\":\"2026-10-03T17:49:55Z\"}"
+    - generic: Fetched source 0
+    - blockquote: "\"message\":\"Add submission logo matching CredentialProof app branding\""
+    - generic: Fetched source 0
+    - generic "Adjudication history (2 reviews)"
+    - text: REVOKED CREDENTIAL
+    - heading "cp-cp-browser-v202-002" [level=4]
+    - list:
+      - listitem: The amzar1st GitHub account is recorded as the author of commit 76608d0c9b63637a7116154fd551583074a8f9c5, which added the CredentialProof submission logo.
+    - text: Non-transferable · Issued 14/10/2026, 19:32:21
+    - generic "Full on-chain record"
+    - heading "Take the next step" [level=3]
+    - paragraph: Use Studio without connecting a wallet, or sign here with your browser wallet.
+    - generic: Action
+    - combobox "Action":
+      - option "Create profile"
+      - option "Submit contribution claim"
+      - option "Attach public evidence"
+      - option "Lock evidence & request verification"
+      - option "Request validator review"
+      - option "Challenge a claim"
+      - option "Respond to challenge as claimant"
+      - option "Retry with replacement evidence"
+      - option "Review counter-evidence"
+      - option "Finalize decision"
+      - option "Close an expired review"
+      - option "Cancel draft or pending claim"
+      - option "Revoke your credential" [selected]
+    - generic: claim id
+    - textbox "claim id": cp-browser-v202-002
+    - button "Prepare Studio action"
+    - status
+  - generic: Evidence first. Finality before reputation.
+  - paragraph: Studionet demo • Non-transferable registry records • Not an accreditation authority
